@@ -37,6 +37,22 @@ A conversational AI chatbot powered by OpenRouter API. Designed as a Python codi
 - Structured tutorial format
 - OpenRouter API integration
 
+### 4. YouTube Video Downloader
+**Directory:** `youtube-video-downloader/`
+
+A modern, user-friendly YouTube video downloader with a beautiful Streamlit interface. Download YouTube videos in various quality options with progress tracking and custom download paths.
+
+**Features:**
+- Modern gradient-based UI design
+- Multiple quality options (2160p to 144p)
+- File size estimation before download
+- Real-time download progress tracking
+- Custom download path selection
+- Video information display (title, duration, uploader, views)
+- Comprehensive error handling
+- URL validation
+- Audio included in all downloads
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -48,7 +64,17 @@ A conversational AI chatbot powered by OpenRouter API. Designed as a Python codi
 1. Clone this repository
 2. Install dependencies:
    ```bash
-   pip install streamlit pandas numpy openai
+   pip install streamlit pandas numpy openai yt-dlp pathlib2
+   ```
+3. For YouTube Video Downloader, also install FFmpeg:
+   ```bash
+   # Ubuntu/Debian
+   sudo apt install ffmpeg
+   
+   # macOS
+   brew install ffmpeg
+   
+   # Windows: Download from https://ffmpeg.org/download.html
    ```
 
 ### Running the Apps
@@ -63,6 +89,10 @@ streamlit run minimueditdistance.py
 
 # Run OpenRouter Chatbot (requires API key setup)
 streamlit run openrouter-api-use.py
+
+# Run YouTube Video Downloader
+cd youtube-video-downloader
+streamlit run app.py
 ```
 
 ## 📋 Requirements
@@ -71,6 +101,9 @@ streamlit run openrouter-api-use.py
 - `pandas` - Data manipulation
 - `numpy` - Numerical computing
 - `openai` - OpenAI API client (for OpenRouter chatbot)
+- `yt-dlp` - YouTube video downloader (for YouTube downloader)
+- `pathlib2` - Enhanced path handling (for YouTube downloader)
+- `ffmpeg` - Audio/video processing (required for YouTube downloader)
 
 ## 🔧 Configuration
 
@@ -87,6 +120,9 @@ These applications are designed for educational purposes and demonstrate:
 - API integration
 - Dynamic programming concepts
 - Natural language processing techniques
+- Video processing and download management
+- Modern UI design with CSS and gradients
+- File system operations and path handling
 
 ## 🤝 Contributing
 
